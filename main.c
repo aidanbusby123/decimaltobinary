@@ -89,7 +89,8 @@ void decToBin(){
     for (n = 0; n <= i-1; n++){
         binInt[n] = temp[n];
         printf("%d",binInt[n]);
-        printf("\n");
+       
     }
+    printf("\n");
         
 }
