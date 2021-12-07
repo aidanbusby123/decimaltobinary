@@ -28,7 +28,7 @@ int main(){
     current_size = len_max;
     char c;
 
-    printf("\033[37m");
+    
     printf("Enter Decimal Integer: \n");
     while ((c = getchar()) != '\n'){
         dec[i] = c;
@@ -44,7 +44,7 @@ int main(){
         i++;
        
     } 
-    dec[i] = '\0';
+    dec[i] = '\0'; //Terminate dec
     charToInt();
     decToBin();
 }
