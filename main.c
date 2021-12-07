@@ -30,14 +30,14 @@ int main(){
 
     
     printf("Enter Decimal Integer: \n");
-    while ((c = getchar()) != '\n'){
+    while ((c = getchar()) != '\n'){ //Allocate the correct amount of memory
         dec[i] = c;
         
         if (i == current_size){
             current_size = len_max + i;
             dec = (char*)realloc(dec, current_size * sizeof(char)+10);
             decInt = (unsigned int*)realloc(decInt, current_size * sizeof(unsigned int) + 10);
-            temp = (unsigned int*)realloc(temp, current_size * sizeof(unsigned int) * 3);
+            temp = (unsigned int*)realloc(temp, current_size * sizeof(unsigned int) * 3); //Hard to predict size of binary output, so 3x size of input memory allocated
             binInt = (unsigned int*)realloc(binInt, current_size * sizeof(unsigned int) * 3);
 
         }
@@ -89,6 +89,7 @@ void decToBin(){
     for (n = 0; n <= i-1; n++){
         binInt[n] = temp[n];
         printf("%d",binInt[n]);
+        printf("\n");
     }
         
 }
